@@ -1,0 +1,10 @@
+{
+	"working_dir": "/opt/mqtt2garmin",
+	"garmin_username": "",
+	"garmin_password": "",
+	"mqtt_user": "",
+	"mqtt_password": "",
+	"mqtt_broker": "",
+	"mqtt_port": "1883",
+	"mqtt_topic": ""
+}

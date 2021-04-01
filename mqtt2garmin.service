@@ -1,0 +1,17 @@
+[Unit]
+Description = mqtt message to garmin connect
+After = network.target
+ 
+[Service]
+Type = simple
+WorkingDirectory=/opt/mqtt2garmin
+ExecStart = python3 /opt/mqtt2garmin/mqtt.py
+User = mqtt2garmin
+Group = mqtt2garmin
+Restart = on-failure
+SyslogIdentifier = mqtt2garmin
+RestartSec = 5
+TimeoutStartSec = infinity
+ 
+[Install]
+WantedBy = multi-user.target
