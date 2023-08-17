@@ -8,7 +8,7 @@ Requires python3 and paho.mqtt.client
 Clone the repository,  
 Copy config.json.example to **config.json** and change values  
 Install paho.mqtt.client  
-**pip3 install paho.mqtt.client**  
+**pip3 install paho-mqtt**  
 To test if connection with garmin connect work, you can run manually  
 **./kg.py 70** (there 70 you weight)  
 Run **mqtt.py**, it will be listening configured topic and post it to Garmin Connect if finds new.  

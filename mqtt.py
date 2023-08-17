@@ -27,9 +27,23 @@ def on_message(client, userdata, message):
     data = str(message.payload.decode("utf-8"))
     print("Message received: "  + data)
     js = json.loads(data)
-    kg = js['weight']
-    print(kg)
-    script = working_dir + "/kg.py " + str(kg)
+    finaldict={}
+    for key in js:
+        print (key)
+        if key == 'body_fat':
+            finaldict["percent_fat"] = js[key]
+        elif key == 'water':
+            finaldict["percent_hydration"] = js[key]
+        elif key == 'basal_metabolism':
+            finaldict["basal_met"] = js[key]
+        elif key == 'visceral_fat':
+            finaldict["visceral_fat_mass"] = js[key]
+        else:
+            finaldict[key] = js[key]
+
+    print(finaldict)
+    script = 'python3 {}/kg.py "{}"'.format(working_dir, finaldict)
+    print(script)
     os.system(script)
 
 def on_subscribe(client, userdata, mid, granted_qos):

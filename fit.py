@@ -203,7 +203,7 @@ class FitEncoder_Weight(FitEncoder):
     def write_weight_scale(self, timestamp, weight, percent_fat=None, percent_hydration=None,
                            visceral_fat_mass=None, bone_mass=None, muscle_mass=None, basal_met=None,
                            active_met=None, physique_rating=None, metabolic_age=None,
-                           visceral_fat_rating=None, bmi=None):
+                           visceral_fat_rating=None, bmi=None, **kwargs):
         content = [
             (253, FitBaseType.uint32, self.timestamp(timestamp), 1),
             (0, FitBaseType.uint16, weight, 100),
