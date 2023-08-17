@@ -1,0 +1,7 @@
+services:
+  mqtt2garmin:
+    image: mqtt2garmin:0.2
+    container_name: mqtt2garmin
+    restart: always
+    volumes:
+      - ${PWD}/config.json:/opt/mqtt2garmin/config.json
