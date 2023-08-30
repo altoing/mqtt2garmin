@@ -5,10 +5,8 @@ Designed to work with https://github.com/lolouk44/xiaomi_mi_scale
 Requires python3 and paho.mqtt.client
 
 ## Docker instalation
-Clone the repository,  
 Copy config.json.example to **config.json** and change values 
 ```
-docker build . -t mqtt2garmin:0.2
 docker-compose up -d
 ```
 
