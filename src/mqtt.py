@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 import paho.mqtt.client as mqttClient
-import time
 import json
 import os
 

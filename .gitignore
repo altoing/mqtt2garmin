@@ -4,3 +4,4 @@ __pycache__
 parse.py
 create_cli.py
 create.py
+config.json
