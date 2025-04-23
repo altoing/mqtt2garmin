@@ -22,13 +22,16 @@ except:
         print('- Date not recognized, defaulting to now')
         values['timestamp'] = datetime.now()
 
+print( "Start decoding...")
 fit = FitEncoder_Weight()
 fit.write_file_info()
 fit.write_file_creator()
 fit.write_weight_scale(**values)
 fit.finish()
+print("Finish decoding...")
 
 garmin = GarminConnect()
-garmin.login(garmin_username, garmin_password)
+print('Connecting to garmin...')
+garmin.login(email=garmin_username, password=garmin_password)
 garmin.upload_file(fit)
 
